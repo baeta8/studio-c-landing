@@ -1,296 +1,680 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio C — Studio de Beleza · Em breve</title>
-<meta name="description" content="O Studio C está chegando! Siga no Instagram e acompanhe a obra até a inauguração.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#5E1730" />
 
-<!-- ═══════════════════════════════════════════════════════════════
-     ✏️  EDITE AQUI — seus dados (deixe entre as aspas):
-     ═══════════════════════════════════════════════════════════════ -->
-<script>
-  const INSTAGRAM_USER = "studiocvip";       // seu @ do Instagram (sem o @)
-  const GA_ID          = "G-BHRNBKF95Q";                  // Google Analytics — ex.: "G-ABC123XYZ"
-  const FB_PIXEL_ID    = "";                  // Pixel do Facebook — ex.: "123456789012345"
-</script>
+  <!-- Primary SEO -->
+  <title>Manicure em Barra Mansa | Studio C — Unhas e Beleza</title>
+  <meta name="description" content="Procurando manicure em Barra Mansa? Studio C, no Centro: manicure, pedicure, unhas em gel, alongamento, sobrancelhas e spa dos pés. Agende pelo WhatsApp." />
+  <link rel="canonical" href="https://www.studiocbeleza.com.br/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Studio C" />
+  <meta name="geo.region" content="BR-RJ" />
+  <meta name="geo.placename" content="Barra Mansa" />
 
-<!-- Google Analytics (GA4) — só carrega quando o GA_ID acima estiver preenchido -->
-<script>
-  if (typeof GA_ID === "string" && GA_ID) {
-    const s = document.createElement("script");
-    s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", GA_ID);
-  }
-</script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Studio C" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Manicure em Barra Mansa | Studio C — Unhas e Beleza" />
+  <meta property="og:description" content="Studio C no Centro de Barra Mansa: manicure, pedicure, unhas em gel, alongamento e cuidados de beleza. Agende pelo WhatsApp." />
+  <meta property="og:url" content="https://www.studiocbeleza.com.br/" />
+  <meta property="og:image" content="https://www.studiocbeleza.com.br/assets/og-studio-c.jpg" />
+  <meta property="og:image:alt" content="Studio C — estúdio de beleza em Barra Mansa" />
 
-<!-- Pixel do Facebook — só carrega quando o FB_PIXEL_ID acima estiver preenchido -->
-<script>
-  if (typeof FB_PIXEL_ID === "string" && FB_PIXEL_ID) {
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,"script","https://connect.facebook.net/en_US/fbevents.js");
-    fbq("init", FB_PIXEL_ID);
-    fbq("track", "PageView");
-  }
-</script>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manicure em Barra Mansa | Studio C — Unhas e Beleza" />
+  <meta name="twitter:description" content="Studio C no Centro de Barra Mansa: manicure, pedicure, unhas em gel, alongamento e cuidados de beleza. Agende pelo WhatsApp." />
+  <meta name="twitter:image" content="https://www.studiocbeleza.com.br/assets/og-studio-c.jpg" />
 
-<link rel="icon" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <!-- Icons / manifest -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
 
-<style>
-  :root {
-    --blush:      #FAF1F1;
-    --rose-deep:  #A81E4D;
-    --rose:       #D9527B;
-    --rose-soft:  #F0B6C6;
-    --ink:        #6E3242;
-    --display: "Cormorant Garamond", "Didot", "Bodoni MT", Georgia, serif;
-    --label:   "Montserrat", "Segoe UI", -apple-system, sans-serif;
-  }
+  <!-- Fonts (preconnect + single request, font-display swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" /></noscript>
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  <link rel="stylesheet" href="css/styles.css?v=2026092402" />
+  <link rel="stylesheet" href="css/redesign.css?v=2026092402" />
 
-  html { -webkit-text-size-adjust: 100%; }
+  <!-- Structured data: LocalBusiness (BeautySalon) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "@id": "https://www.studiocbeleza.com.br/#studioc",
+    "name": "Studio C",
+    "description": "Estúdio de beleza no Centro de Barra Mansa com mais de 10 anos de experiência em manicure, unhas, design de sobrancelhas, cílios e spa dos pés.",
+    "url": "https://www.studiocbeleza.com.br/",
+    "telephone": "+5524998540945",
+    "image": "https://www.studiocbeleza.com.br/assets/og-studio-c.jpg",
+    "priceRange": "$$",
+    "currenciesAccepted": "BRL",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:00" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Joaquim Leite, 509 - Shop House, 1º Andar, Sala 27",
+      "addressLocality": "Barra Mansa",
+      "addressRegion": "RJ",
+      "postalCode": "27345-391",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -22.5451104,
+      "longitude": -44.1724901
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Barra Mansa" },
+      { "@type": "City", "name": "Volta Redonda" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/studiocvip",
+      "https://www.google.com/maps/place/Studio+C/@-22.5451104,-44.175065,17z/data=!3m1!4b1!3m2!1s0x9e9ba6f0620519:0x7c28b66ee7455336"
+    ],
+    "hasMap": "https://www.google.com/maps/place/Studio+C/@-22.5451104,-44.175065,17z/data=!3m1!4b1!3m2!1s0x9e9ba6f0620519:0x7c28b66ee7455336",
+    "founder": {
+      "@type": "Person",
+      "name": "Caroll Nascimento",
+      "jobTitle": "Manicure e designer de sobrancelhas",
+      "knowsAbout": ["Alongamento de unhas", "Molde F1", "Soft gel", "Fibra de vidro", "Unhas encapsuladas", "Esmaltação em gel", "Blindagem de unhas", "Design de sobrancelhas"]
+    },
+    "foundingDate": "2015",
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manicure e Pedicure" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Esmaltação em Gel" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Banho de Gel" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Blindagem das Unhas" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Alongamento de Unhas (Molde F1 e Softgel)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design de Sobrancelha" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design de Sobrancelha com Henna" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Spa dos Pés" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extensão de Cílios" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenção de Cílios" } }
+    ]
+  }
+  </script>
 
-  body {
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:
-      radial-gradient(120% 60% at 50% -10%, #FDE7EC 0%, transparent 60%),
-      var(--blush);
-    color: var(--ink);
-    font-family: var(--label);
-    overflow-x: hidden;
+  <!-- Structured data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Onde fica o Studio C em Barra Mansa?", "acceptedAnswer": { "@type": "Answer", "text": "O Studio C está localizado na Av. Joaquim Leite, 509, no Centro de Barra Mansa - RJ, dentro do Shop House, 1º andar, sala 27." } },
+      { "@type": "Question", "name": "Quais serviços de unhas o Studio C oferece?", "acceptedAnswer": { "@type": "Answer", "text": "O Studio C oferece manicure, pedicure, esmaltação em gel, banho de gel, blindagem e alongamento de unhas com molde F1 ou Softgel." } },
+      { "@type": "Question", "name": "O Studio C faz design de sobrancelhas?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O Studio C oferece design de sobrancelhas e design de sobrancelha com henna." } },
+      { "@type": "Question", "name": "O Studio C oferece Spa dos Pés?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Há opções de Spa dos Pés e Spa + Pé." } },
+      { "@type": "Question", "name": "Quem vai me atender no Studio C?", "acceptedAnswer": { "@type": "Answer", "text": "O Studio C conta com a Caroll Nascimento e outras profissionais qualificadas, todas seguindo o mesmo padrão de técnica, higiene e atendimento. Ao confirmar o agendamento pelo WhatsApp, a equipe informa qual profissional vai atender você no horário escolhido." } },
+      { "@type": "Question", "name": "Como posso agendar um horário no Studio C?", "acceptedAnswer": { "@type": "Answer", "text": "O agendamento é feito pelo WhatsApp (24) 99854-0945. Basta enviar uma mensagem escolhendo o serviço desejado." } }
+    ]
   }
-
-  main {
-    width: 100%;
-    max-width: 30rem;
-    padding: 2.5rem 1.75rem 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex: 1;
-    position: relative;
-  }
-
-  /* ── Logo ─────────────────────────────────────── */
-  .logo-wrap {
-    position: relative;
-    width: min(72vw, 18rem);
-    animation: rise .9s ease both;
-  }
-  .logo-wrap::before {
-    /* halo suave atrás da logo */
-    content: "";
-    position: absolute;
-    inset: -12%;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,.9) 0%, transparent 70%);
-  }
-  .logo-wrap img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* ── Etiqueta "em breve" (eco do divisor da logo) ── */
-  .eyebrow {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-    margin-top: 1.25rem;
-    color: var(--rose);
-    font-size: .72rem;
-    font-weight: 600;
-    letter-spacing: .32em;
-    text-transform: uppercase;
-    animation: rise .9s .15s ease both;
-  }
-  .eyebrow::before, .eyebrow::after {
-    content: "";
-    width: 3rem;
-    height: 1px;
-    background: var(--rose-soft);
-  }
-
-  h1 {
-    margin-top: 1rem;
-    font-family: var(--display);
-    font-weight: 500;
-    font-size: clamp(1.9rem, 8vw, 2.6rem);
-    line-height: 1.15;
-    color: var(--rose-deep);
-    text-wrap: balance;
-    animation: rise .9s .25s ease both;
-  }
-  h1 em {
-    font-style: italic;
-    font-weight: 600;
-  }
-
-  .lead {
-    margin-top: 1.1rem;
-    max-width: 26rem;
-    font-size: .95rem;
-    line-height: 1.7;
-    animation: rise .9s .35s ease both;
-  }
-
-  /* ── Botão do Instagram ───────────────────────── */
-  .cta {
-    margin-top: 2rem;
-    display: inline-flex;
-    align-items: center;
-    gap: .65rem;
-    padding: 1.05rem 2.2rem;
-    border-radius: 999px;
-    background: linear-gradient(120deg, var(--rose) 0%, var(--rose-deep) 100%);
-    color: #FFF6F8;
-    font-family: var(--label);
-    font-size: .95rem;
-    font-weight: 600;
-    letter-spacing: .04em;
-    text-decoration: none;
-    box-shadow: 0 12px 28px -10px rgba(168, 30, 77, .55);
-    transition: transform .2s ease, box-shadow .2s ease;
-    animation: rise .9s .45s ease both;
-  }
-  .cta:hover, .cta:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 32px -10px rgba(168, 30, 77, .6);
-  }
-  .cta:focus-visible {
-    outline: 2px solid var(--rose-deep);
-    outline-offset: 3px;
-  }
-  .cta svg { width: 1.25rem; height: 1.25rem; }
-
-  .handle {
-    margin-top: .9rem;
-    font-size: .8rem;
-    color: var(--rose);
-    animation: rise .9s .55s ease both;
-  }
-  .handle strong { font-weight: 600; }
-
-  /* ── Rodapé ───────────────────────────────────── */
-  footer {
-    padding: 1.4rem 1rem 1.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-    font-size: .72rem;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--rose);
-  }
-  footer .divider {
-    display: flex;
-    align-items: center;
-    gap: .6rem;
-  }
-  footer .divider::before, footer .divider::after {
-    content: "";
-    width: 2.4rem;
-    height: 1px;
-    background: var(--rose-soft);
-  }
-  footer .heart { color: var(--rose); font-size: .8rem; letter-spacing: 0; }
-
-  /* ── Sparkles flutuantes ──────────────────────── */
-  .sparkle {
-    position: absolute;
-    color: var(--rose-soft);
-    animation: twinkle 3.2s ease-in-out infinite;
-    pointer-events: none;
-  }
-  .sparkle svg { width: 100%; height: 100%; display: block; }
-  .s1 { top: 6%;  left: 10%; width: 1rem;   animation-delay: 0s;   }
-  .s2 { top: 3%;  right: 14%; width: .7rem; animation-delay: 1.1s; }
-  .s3 { top: 38%; left: 4%;  width: .65rem; animation-delay: 2s;   }
-  .s4 { top: 34%; right: 6%; width: 1.1rem; animation-delay: .6s;  }
-  .s5 { top: 58%; left: 12%; width: .55rem; animation-delay: 1.6s; }
-
-  @keyframes twinkle {
-    0%, 100% { opacity: .35; transform: scale(.8) rotate(0deg); }
-    50%      { opacity: 1;   transform: scale(1.15) rotate(20deg); }
-  }
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(14px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .sparkle { animation: none; opacity: .5; }
-    .logo-wrap, .eyebrow, h1, .lead, .cta, .handle { animation: none; }
-    .cta { transition: none; }
-  }
-</style>
+  </script>
 </head>
+
 <body>
+  <a class="skip-link" href="#top">Ir para o conteúdo</a>
 
-<main>
-  <span class="sparkle s1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.8 6.5 5.5 11.2 12 12-6.5.8-11.2 5.5-12 12-.8-6.5-5.5-11.2-12-12C6.5 11.2 11.2 6.5 12 0z"/></svg></span>
-  <span class="sparkle s2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.8 6.5 5.5 11.2 12 12-6.5.8-11.2 5.5-12 12-.8-6.5-5.5-11.2-12-12C6.5 11.2 11.2 6.5 12 0z"/></svg></span>
-  <span class="sparkle s3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.8 6.5 5.5 11.2 12 12-6.5.8-11.2 5.5-12 12-.8-6.5-5.5-11.2-12-12C6.5 11.2 11.2 6.5 12 0z"/></svg></span>
-  <span class="sparkle s4" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.8 6.5 5.5 11.2 12 12-6.5.8-11.2 5.5-12 12-.8-6.5-5.5-11.2-12-12C6.5 11.2 11.2 6.5 12 0z"/></svg></span>
-  <span class="sparkle s5" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.8 6.5 5.5 11.2 12 12-6.5.8-11.2 5.5-12 12-.8-6.5-5.5-11.2-12-12C6.5 11.2 11.2 6.5 12 0z"/></svg></span>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="header">
+    <div class="utility-bar">
+      <div class="container utility-bar__inner">
+        <span class="utility-bar__location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg> Centro de Barra Mansa · RJ</span>
+        <span class="utility-bar__care">Mais de 10 anos de cuidado e beleza</span>
+        <a href="https://www.instagram.com/studiocvip" target="_blank" rel="noopener" aria-label="Instagram do Studio C">Instagram <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Studio C — estúdio de beleza, página inicial">
+        <picture>
+          <source srcset="assets/logo-full-compact.webp" type="image/webp" />
+          <img class="brand__logo" src="assets/logo-full-compact.png" alt="Studio C — estúdio de beleza" width="71" height="76"
+               onerror="this.closest('picture').style.display='none';this.closest('picture').nextElementSibling.hidden=false" />
+        </picture>
+        <span class="brand__fallback" hidden>
+          <span class="brand__mark">Studio<span class="brand__c"> C</span></span>
+          <span class="brand__tag">Beleza</span>
+        </span>
+      </a>
 
-  <div class="logo-wrap">
-    <img src="logo.png" alt="Studio C — Studio de Beleza" width="720" height="720">
-  </div>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#localizacao">Localização</a>
+      </nav>
 
-  <p class="eyebrow">Em breve · Inauguração</p>
+      <div class="header-cta">
+        <a class="btn btn--ghost btn--sm" href="#servicos">Ver serviços</a>
+        <a class="btn btn--primary btn--sm" href="#agendar">Agende seu horário</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav"><span></span></button>
+      </div>
+    </div>
 
-  <h1>Algo lindo está nascendo <em>por trás destas portas</em></h1>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#unhas">Unhas & Manicure</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#localizacao">Localização</a>
+      <a class="btn btn--primary" href="#agendar">Agende seu horário</a>
+    </nav>
+  </header>
 
-  <p class="lead">
-    Curiosa? 💕 O <strong>Studio&nbsp;C</strong> está em obras e cada detalhe
-    está sendo preparado com muito carinho. Siga a gente no Instagram para
-    acompanhar os bastidores da reforma, ver os primeiros spoilers e saber
-    em primeira mão a data da inauguração.
-  </p>
+  <main id="top">
 
-  <a class="cta" id="ig-link" href="https://instagram.com/studiocvip" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <rect x="2" y="2" width="20" height="20" rx="5"/>
-      <circle cx="12" cy="12" r="4.5"/>
-      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
-    </svg>
-    Acompanhar no Instagram
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow">Estúdio de beleza · Barra Mansa - RJ</span>
+          <h1>Manicure em Barra Mansa com <em>cuidado especial</em>.</h1>
+          <p class="hero__sub">Unhas, sobrancelhas, cílios e spa para você se sentir ainda mais linda — no coração do Centro de Barra Mansa.</p>
+
+          <div class="hero__badge">
+            <b>+10</b> anos cuidando da beleza das barra-mansenses
+          </div>
+          <p class="hero__loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Av. Joaquim Leite, 509 — Shop House, 1º Andar, Sala 27 · Centro
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#agendar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>
+              Agende seu horário
+            </a>
+            <a class="btn btn--ghost" href="#servicos">Conheça nossos serviços</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="arch-frame arch-frame--main">
+            <picture>
+              <source srcset="assets/servico-unhas-560.webp 560w, assets/servico-unhas.webp 900w" sizes="(max-width: 720px) 90vw, (max-width: 1100px) 45vw, 520px" type="image/webp" />
+              <img src="assets/servico-unhas-560.jpg" srcset="assets/servico-unhas-560.jpg 560w, assets/servico-unhas.jpg 900w" sizes="(max-width: 720px) 90vw, (max-width: 1100px) 45vw, 520px" width="900" height="1200" loading="eager" fetchpriority="high" decoding="async"
+                   alt="Unhas em gel com esmaltação francesa e brilho feitas no Studio C, em Barra Mansa" />
+            </picture>
+          </div>
+          <div class="arch-frame arch-frame--sub">
+            <picture>
+              <source srcset="assets/servico-pe-450.webp 450w, assets/servico-pe.webp 900w" sizes="(max-width: 720px) 40vw, (max-width: 1100px) 30vw, 320px" type="image/webp" />
+              <img src="assets/servico-pe-450.jpg" srcset="assets/servico-pe-450.jpg 450w, assets/servico-pe.jpg 900w" sizes="(max-width: 720px) 40vw, (max-width: 1100px) 30vw, 320px" width="900" height="1200" loading="eager" decoding="async"
+                   alt="Pedicure decorada com nail art nos pés, feita no Studio C" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section class="trust" aria-label="Nossos diferenciais">
+      <div class="container">
+        <div class="trust__item reveal"><b class="gold">+10</b><span>anos de experiência</span></div>
+        <div class="trust__item reveal reveal-d1"><b>Ágil</b><span>atendimento pensado para sua rotina</span></div>
+        <div class="trust__item reveal reveal-d2"><b>Higiene</b><span>e cuidado em cada atendimento</span></div>
+        <div class="trust__item reveal reveal-d3"><b>Centro</b><span>de Barra Mansa · localização privilegiada</span></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="section services" id="servicos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Nossos serviços</span>
+          <h2>Serviços de beleza para cuidar de você</h2>
+          <p>Do clássico ao alongamento em gel, cada procedimento é feito com técnica, higiene e atenção aos detalhes.</p>
+        </div>
+
+        <div class="services__grid">
+          <!-- Unhas -->
+          <article class="svc-card reveal">
+            <picture class="svc-card__image"><source srcset="assets/servico-unhas.webp" type="image/webp" /><img src="assets/servico-unhas.jpg" width="900" height="1200" loading="lazy" decoding="async" alt="Unhas em gel com esmaltação francesa feitas no Studio C" /></picture>
+            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3.5c1.6-1 4.4-1 6 0 1.2.8 1.5 2.4 1.2 4l-1.5 9.3A3 3 0 0 1 11.7 20h.6a3 3 0 0 1-3-2.6L7.8 7.5C7.5 5.9 7.8 4.3 9 3.5Z"/><path d="M8 8h8"/></svg></div>
+            <h3>Unhas &amp; Alongamento</h3>
+            <p>Alongamento com molde F1 ou Softgel, esmaltação em gel, banho de gel e blindagem para unhas fortes e bonitas por mais tempo.</p>
+            <ul class="svc-card__list"><li>Alongamento</li><li>Molde F1</li><li>Softgel</li><li>Esmaltação em gel</li><li>Banho de gel</li><li>Blindagem</li></ul>
+            <div class="svc-card__cta"><a href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20servi%C3%A7o%20de%20unhas%20no%20Studio%20C." target="_blank" rel="noopener">Agendar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          </article>
+
+          <!-- Mãos e Pés -->
+          <article class="svc-card reveal reveal-d1">
+            <picture class="svc-card__image"><source srcset="assets/servico-pe.webp" type="image/webp" /><img src="assets/servico-pe.jpg" width="900" height="1200" loading="lazy" decoding="async" alt="Pedicure decorada feita no Studio C" /></picture>
+            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v4M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V6a1.5 1.5 0 0 1 3 0v6c0 4-2.5 7-6 7s-6-2.5-6-6v-1a1.5 1.5 0 0 1 3 0"/></svg></div>
+            <h3>Mãos &amp; Pés</h3>
+            <p>Manicure e pedicure com acabamento impecável. Escolha o combo Pé e Mão ou o cuidado individual para mãos ou pés.</p>
+            <ul class="svc-card__list"><li>Pé e Mão</li><li>Mão</li><li>Pé</li></ul>
+            <div class="svc-card__cta"><a href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20manicure%20e%20pedicure%20no%20Studio%20C." target="_blank" rel="noopener">Agendar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          </article>
+
+          <!-- Sobrancelhas -->
+          <article class="svc-card reveal reveal-d2">
+            <picture class="svc-card__image"><source srcset="assets/servico-sobrancelha.webp" type="image/webp" /><img src="assets/servico-sobrancelha.jpg" width="900" height="1200" loading="lazy" decoding="async" alt="Design de sobrancelhas realizado no Studio C" /></picture>
+            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14c4-5 12-5 16 0"/><path d="M6 12c3-3 9-3 12 0"/></svg></div>
+            <h3>Sobrancelhas</h3>
+            <p>Design que valoriza o seu olhar e harmoniza o rosto. Opção com henna para um resultado mais definido e duradouro.</p>
+            <ul class="svc-card__list"><li>Design de Sobrancelha</li><li>Design com Henna</li></ul>
+            <div class="svc-card__cta"><a href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20design%20de%20sobrancelha%20no%20Studio%20C." target="_blank" rel="noopener">Agendar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          </article>
+
+          <!-- Spa -->
+          <article class="svc-card reveal">
+            <picture class="svc-card__image"><source srcset="assets/ambiente.webp" type="image/webp" /><img src="assets/ambiente.jpg" width="900" height="1125" loading="lazy" decoding="async" alt="Ambiente acolhedor do Studio C" /></picture>
+            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20c5-3 8-7 8-11a8 8 0 0 0-16 0c0 4 3 8 8 11Z"/><path d="M12 13c2-1.5 3-3 3-5"/></svg></div>
+            <h3>Spa</h3>
+            <p>Um momento de relaxamento e cuidado. Spa dos Pés para revitalizar, com opção Spa + Pé completa.</p>
+            <ul class="svc-card__list"><li>Spa dos Pés</li><li>Spa + Pé</li></ul>
+            <div class="svc-card__cta"><a href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20Spa%20dos%20P%C3%A9s%20no%20Studio%20C." target="_blank" rel="noopener">Agendar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          </article>
+
+          <!-- Cílios -->
+          <article class="svc-card reveal reveal-d1">
+            <div class="svc-card__image svc-card__image--illustrative">
+              <picture><source srcset="assets/servico-cilios.webp" type="image/webp" /><img src="assets/servico-cilios.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Imagem ilustrativa de extensão de cílios com acabamento natural" /></picture>
+              <span class="svc-card__image-note">Imagem ilustrativa</span>
+            </div>
+            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13c4 4 14 4 18 0"/><path d="M6 15l-1 3M12 16v3M18 15l1 3M9 15.6l-.6 2.6M15 15.6l.6 2.6"/></svg></div>
+            <h3>Cílios</h3>
+            <p>Olhar marcante e natural com extensão de cílios, e manutenção para manter o volume bonito por mais tempo.</p>
+            <ul class="svc-card__list"><li>Extensão de Cílios</li><li>Manutenção de Cílios</li></ul>
+            <div class="svc-card__cta"><a href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20c%C3%ADlios%20no%20Studio%20C." target="_blank" rel="noopener">Agendar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          </article>
+
+          <!-- CTA card -->
+          <article class="svc-card reveal reveal-d2" style="background:var(--blush);border-color:var(--gold-soft);justify-content:center;">
+            <h3 style="font-size:1.7rem;">Não sabe por onde começar?</h3>
+            <p>Conte pra gente o que você procura e indicamos o melhor cuidado para você.</p>
+            <div class="svc-card__cta"><a class="btn btn--wa btn--sm" href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Gostaria%20de%20uma%20recomenda%C3%A7%C3%A3o%20de%20servi%C3%A7o%20no%20Studio%20C." target="_blank" rel="noopener">Falar com o Studio C</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEÇÃO ESPECIAL DE UNHAS ============ -->
+    <section class="section nails" id="unhas">
+      <div class="container nails__grid">
+        <div class="nails__visual reveal">
+          <div class="arch-frame">
+            <picture><source srcset="assets/servico-alongamento.webp" type="image/webp" /><img src="assets/servico-alongamento.jpg" width="900" height="1200" loading="lazy" decoding="async" alt="Alongamento de unhas com esmaltação francesa feito no Studio C, em Barra Mansa" /></picture>
+          </div>
+          <div class="arch-frame">
+            <picture><source srcset="assets/servico-esmaltacao.webp" type="image/webp" /><img src="assets/servico-esmaltacao.jpg" width="900" height="1200" loading="lazy" decoding="async" alt="Unhas com esmaltação em gel nude e acabamento amendoado no Studio C" /></picture>
+          </div>
+        </div>
+
+        <div class="nails__copy reveal reveal-d1">
+          <span class="eyebrow">Especialidade da casa</span>
+          <h2>Manicure e cuidados com as unhas em Barra Mansa</h2>
+          <p>O Studio C oferece serviços de manicure e cuidados com as unhas no Centro de Barra Mansa, com opções para diferentes estilos e necessidades. Entre os serviços estão manicure, pedicure, esmaltação em gel, banho de gel, blindagem e alongamento de unhas com molde F1 ou Softgel.</p>
+          <ul class="nails__tags">
+            <li>Manicure &amp; Pedicure</li>
+            <li>Esmaltação em gel</li>
+            <li>Banho de gel</li>
+            <li>Blindagem</li>
+            <li>Molde F1</li>
+            <li>Softgel</li>
+          </ul>
+          <a class="btn btn--primary" href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Quero%20cuidar%20das%20minhas%20unhas%20no%20Studio%20C.%20Pode%20me%20ajudar%20a%20agendar%3F" target="_blank" rel="noopener">Quero cuidar das minhas unhas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AGENDAMENTO ============ -->
+    <section class="section booking" id="agendar">
+      <div class="container">
+        <div class="section-head text-center reveal">
+          <span class="eyebrow">Agendamento</span>
+          <h2>Monte seu horário em 3 passos</h2>
+          <p>Escolha o serviço, o dia e o horário. Você é direcionada ao WhatsApp com a mensagem pronta, e a equipe confirma a disponibilidade.</p>
+        </div>
+
+        <div class="booking__card reveal reveal-d1">
+          <form id="bookingForm" class="booking__form" novalidate>
+            <!-- Passo 1 — Serviço -->
+            <div class="booking__step">
+              <span class="booking__num" aria-hidden="true">1</span>
+              <div class="booking__field">
+                <label for="bkService">Escolha o serviço</label>
+                <select id="bkService" required>
+                  <option value="" selected disabled>Selecione um serviço</option>
+                  <optgroup label="Mãos e Pés">
+                    <option>Pé e Mão</option>
+                    <option>Mão</option>
+                    <option>Pé</option>
+                  </optgroup>
+                  <optgroup label="Unhas">
+                    <option>Alongamento de Unhas</option>
+                    <option>Molde F1</option>
+                    <option>Softgel</option>
+                    <option>Esmaltação em Gel</option>
+                    <option>Banho de Gel</option>
+                    <option>Blindagem das Unhas</option>
+                  </optgroup>
+                  <optgroup label="Sobrancelhas">
+                    <option>Design de Sobrancelha</option>
+                    <option>Design de Sobrancelha com Henna</option>
+                  </optgroup>
+                  <optgroup label="Spa">
+                    <option>Spa dos Pés</option>
+                    <option>Spa + Pé</option>
+                  </optgroup>
+                  <optgroup label="Cílios">
+                    <option>Extensão de Cílios</option>
+                    <option>Manutenção de Cílios</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <!-- Passo 2 — Dia -->
+            <div class="booking__step">
+              <span class="booking__num" aria-hidden="true">2</span>
+              <div class="booking__field">
+                <label for="bkDate">Escolha o dia</label>
+                <div class="booking__date-picker" id="bkDatePickerWrap">
+                  <input type="hidden" id="bkDate" required />
+                  <button class="booking__date-toggle" id="bkDateToggle" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="bkDatePicker">
+                    <span id="bkDateLabel">Selecione uma data</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+                  </button>
+                  <div class="booking__calendar" id="bkDatePicker" role="dialog" aria-label="Escolha uma data para o atendimento" hidden>
+                    <div class="booking__calendar-head">
+                    <button class="booking__calendar-nav" id="bkPrevMonth" type="button" aria-label="Mês anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m14.5 5-7 7 7 7"/></svg></button>
+                    <h3 id="bkCalendarTitle" aria-live="polite"></h3>
+                    <button class="booking__calendar-nav" id="bkNextMonth" type="button" aria-label="Próximo mês"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m9.5 5 7 7-7 7"/></svg></button>
+                    </div>
+                    <div class="booking__calendar-weekdays" aria-hidden="true"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div>
+                    <div class="booking__calendar-days" id="bkCalendarDays" role="grid" aria-labelledby="bkCalendarTitle"></div>
+                    <p class="booking__calendar-legend"><span aria-hidden="true"></span> Dias com atendimento</p>
+                  </div>
+                </div>
+                <p class="booking__hint" id="bkDayHint" role="status"></p>
+              </div>
+            </div>
+
+            <!-- Passo 3 — Horário -->
+            <div class="booking__step">
+              <span class="booking__num" aria-hidden="true">3</span>
+              <div class="booking__field">
+                <label id="bkSlotsLabel">Escolha o horário</label>
+                <div class="booking__slots" id="bkSlots" role="group" aria-labelledby="bkSlotsLabel">
+                  <p class="booking__placeholder">Selecione um dia para ver os horários disponíveis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking__local">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Atendimento no <b>Studio C</b> — Av. Joaquim Leite, 509, 1º Andar, Sala 27, Centro, Barra Mansa - RJ</span>
+            </div>
+
+            <div class="booking__summary" id="bkSummary" hidden></div>
+
+            <a class="btn btn--wa booking__send is-disabled" id="bkSend" href="#" target="_blank" rel="noopener" aria-disabled="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 0 1-5-4.4c-.4-.6-.7-1.4-.7-2 0-.6.3-1 .5-1.2.2-.2.4-.3.6-.3h.4c.2 0 .3 0 .5.4l.7 1.6c0 .2 0 .3-.1.5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.3 1.8 1.8.3.2.5.1.6 0l.6-.6c.2-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3.1.2.1.5 0 .8Z"/></svg>
+              Enviar pedido pelo WhatsApp
+            </a>
+            <p class="booking__note">A mensagem já vai preenchida com serviço, dia, horário e local. A equipe do Studio C confirma a disponibilidade e qual profissional vai te atender.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIFERENCIAIS ============ -->
+    <section class="section diff" id="diferenciais">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Por que o Studio C</span>
+          <h2>Por que escolher o Studio C?</h2>
+        </div>
+        <div class="diff__grid">
+          <article class="diff-card reveal">
+            <div class="diff-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l2.5 5.2 5.7.8-4.1 4 1 5.7L12 21l-5.1 2.7 1-5.7-4.1-4 5.7-.8L12 3Z"/></svg></div>
+            <h3>+10 anos de experiência</h3>
+            <p>Experiência construída ao longo de mais de uma década trabalhando com beleza e atendimento.</p>
+          </article>
+          <article class="diff-card reveal reveal-d1">
+            <div class="diff-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 7L9 18l-5-5"/></svg></div>
+            <h3>Higiene e cuidado</h3>
+            <p>A saúde e o bem-estar das clientes são prioridades em cada atendimento.</p>
+          </article>
+          <article class="diff-card reveal reveal-d2">
+            <div class="diff-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3>Equipe e horários</h3>
+            <p>Mais de uma profissional qualificada no atendimento e agenda organizada, para você conseguir horário sem virar a sua rotina do avesso.</p>
+          </article>
+          <article class="diff-card reveal reveal-d3">
+            <div class="diff-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <h3>Localização privilegiada</h3>
+            <p>Estamos no Centro de Barra Mansa, dentro do Shop House — fácil de chegar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section about" id="sobre">
+      <div class="container about__grid">
+        <div class="about__copy reveal">
+          <span class="eyebrow">Quem vai cuidar de você</span>
+          <h2>Beleza, cuidado e experiência em Barra Mansa</h2>
+          <p class="about__intro">Prazer, eu sou a Caroll.</p>
+          <p>Comecei em 2015, no quintal de casa, encaixando as primeiras clientes na rotina de mãe de três. O caminho teve seus desafios, e é justamente por isso que cada detalhe daqui tem tanto valor pra mim: o Studio C foi construído um atendimento de cada vez, até chegar ao Centro de Barra Mansa.</p>
+          <p>Ao longo desses mais de 10 anos me especializei em alongamento em fibra de vidro, molde F1, soft gel, unhas encapsuladas, esmaltação em gel, blindagem e design de sobrancelhas — incluindo o conhecimento químico dos produtos que uso. É isso que me permite cuidar da saúde da sua unha, e não só da aparência dela.</p>
+          <p>Mas se tem uma coisa que eu faço questão, é de ouvir. Vir à manicure não é só fazer as unhas: é um tempo seu, e ele precisa ser leve. Foi assim que eu aprendi a atender — e é assim que a gente atende aqui.</p>
+          <p>Hoje o Studio C já não é só eu. Comigo trabalham outras profissionais qualificadas, que seguem o mesmo padrão de técnica, higiene e atenção que eu levei uma década construindo. Na prática, isso quer dizer que você encontra horário com mais facilidade — e é bem cuidada por qualquer uma de nós.</p>
+          <p class="about__sign">— Caroll Nascimento, do Studio C</p>
+          <p class="about__verse">“Tudo tem o seu tempo determinado, e há tempo para todo o propósito debaixo do céu.” <span>Eclesiastes 3:1</span></p>
+        </div>
+        <div class="about__visual reveal reveal-d1">
+          <div class="arch-frame">
+            <picture>
+              <source srcset="assets/caroll.webp" type="image/webp" />
+              <img src="assets/caroll.jpg" width="800" height="1000" loading="lazy" decoding="async"
+                   alt="Caroll Nascimento, proprietária do Studio C, estúdio de beleza no Centro de Barra Mansa" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERIA ============ -->
+    <section class="section gallery" id="galeria">
+      <div class="container">
+        <div class="section-head text-center reveal">
+          <span class="eyebrow">Galeria</span>
+          <h2>Conheça o nosso espaço</h2>
+          <p>Um ambiente acolhedor e higiênico no Centro de Barra Mansa, pensado para o seu conforto do momento em que você chega.</p>
+        </div>
+        <div class="gallery__grid">
+          <figure class="reveal">
+            <picture><source srcset="assets/ambiente.webp" type="image/webp" /><img src="assets/ambiente.jpg" width="900" height="1125" loading="lazy" decoding="async" alt="Fachada do Studio C: vitrine de vidro com o logo da marca e o ambiente interno em tons de rosa, no Shop House" /></picture>
+          </figure>
+          <figure class="reveal">
+            <picture><source srcset="assets/galeria-1.webp" type="image/webp" /><img src="assets/galeria-1.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Entrada do Studio C, com porta de vidro e vista para o ambiente interno em tons de rosa" /></picture>
+          </figure>
+          <figure class="reveal reveal-d1">
+            <picture><source srcset="assets/galeria-2.webp" type="image/webp" /><img src="assets/galeria-2.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Espaço de espera do Studio C, com poltronas e espelho decorativo com a marca" /></picture>
+          </figure>
+          <figure class="reveal reveal-d2">
+            <picture><source srcset="assets/galeria-3.webp" type="image/webp" /><img src="assets/galeria-3.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Expositor com grande variedade de cores de esmaltes no Studio C" /></picture>
+          </figure>
+          <figure class="reveal">
+            <picture><source srcset="assets/galeria-4.webp" type="image/webp" /><img src="assets/galeria-4.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Prateleira com produtos de cuidado e beleza no Studio C" /></picture>
+          </figure>
+          <figure class="reveal reveal-d1">
+            <picture><source srcset="assets/galeria-5.webp" type="image/webp" /><img src="assets/galeria-5.jpg" width="720" height="900" loading="lazy" decoding="async" alt="Cantinho do café do Studio C, um espaço de cortesia para as clientes" /></picture>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AVALIAÇÕES GOOGLE ============ -->
+    <section class="google-reviews" id="avaliacoes">
+      <div class="container">
+        <div class="google-reviews__card reveal">
+          <span class="eyebrow">Avaliações no Google</span>
+          <h2>Confiança de quem já conhece o Studio C</h2>
+          <p class="google-reviews__rating"><span class="google-reviews__stars" aria-label="5 estrelas">★★★★★</span><span>5,0 no Google</span></p>
+          <div class="google-reviews__grid">
+            <figure class="google-review">
+              <div class="google-review__stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote>“Espaço lindo e atendimento de qualidade! ❤️”</blockquote>
+              <figcaption>Laiani <span>· Avaliação no Google</span></figcaption>
+            </figure>
+            <figure class="google-review">
+              <div class="google-review__stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote>“Atenciosa, prestativa, e tem um trabalho impecável!!!”</blockquote>
+              <figcaption>Maria Allicia <span>· Avaliação no Google</span></figcaption>
+            </figure>
+            <figure class="google-review">
+              <div class="google-review__stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote>“As unhas ficam impecáveis.”</blockquote>
+              <figcaption>TACOGRAFE CRONOTACOGRAFE <span>· Avaliação no Google</span></figcaption>
+            </figure>
+          </div>
+          <p class="google-reviews__note">Trechos de avaliações públicas. Leia os comentários completos no perfil oficial do Studio C.</p>
+          <a class="btn btn--primary" href="https://g.page/r/CTZTRedutih8EAE/review" target="_blank" rel="noopener">Ler avaliações no Google <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSTAGRAM ============ -->
+    <section class="section insta" id="instagram">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center;">Acompanhe o dia a dia</span>
+        <p class="insta__handle">Siga o Studio C <span>@studiocvip</span></p>
+        <div class="insta__row">
+          <a class="btn btn--primary" href="https://www.instagram.com/studiocvip" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/></svg>
+            Ver Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOCALIZAÇÃO ============ -->
+    <section class="section location" id="localizacao">
+      <div class="container">
+        <div class="loc__grid">
+          <div class="loc__card reveal">
+            <span class="eyebrow">Onde estamos</span>
+            <h2>Studio C no Centro de Barra Mansa</h2>
+            <ul class="loc__list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.3-7-11a7 7 0 1 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <div><b>Endereço</b><address>Av. Joaquim Leite, 509 — Shop House, 1º Andar, Sala 27<br>Centro, Barra Mansa - RJ</address></div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5a2 2 0 0 1 2-2h2l2 5-2 1a12 12 0 0 0 5 5l1-2 5 2v2a2 2 0 0 1-2 2A16 16 0 0 1 4 5Z"/></svg>
+                <div><b>WhatsApp / Telefone</b><a href="tel:+5524998540945">(24) 99854-0945</a></div>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/></svg>
+                <div><b>Instagram</b><a href="https://www.instagram.com/studiocvip" target="_blank" rel="noopener">@studiocvip</a></div>
+              </li>
+            </ul>
+            <div class="loc__actions">
+              <a class="btn btn--ghost" href="https://share.google/kJ8aWybBvoafKnTVN" target="_blank" rel="noopener">Como chegar</a>
+              <a class="btn btn--wa" href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20C." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="loc__map reveal reveal-d1">
+            <iframe title="Mapa da localização do Studio C — Av. Joaquim Leite, 509, Centro, Barra Mansa - RJ"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-44.17651%2C-22.54901%2C-44.16851%2C-22.54101&amp;layer=mapnik&amp;marker=-22.54501%2C-44.17251"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="section cta-band">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center;color:var(--gold-soft);">Vamos cuidar de você</span>
+        <h2>Pronta para se sentir ainda mais linda?</h2>
+        <p>Agende seu horário pelo WhatsApp e garanta um atendimento com técnica, higiene e todo o cuidado que você merece.</p>
+        <a class="btn btn--wa" href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Conheci%20o%20Studio%20C%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 0 1-5-4.4c-.4-.6-.7-1.4-.7-2 0-.6.3-1 .5-1.2.2-.2.4-.3.6-.3h.4c.2 0 .3 0 .5.4l.7 1.6c0 .2 0 .3-.1.5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.3 1.8 1.8.3.2.5.1.6 0l.6-.6c.2-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3.1.2.1.5 0 .8Z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-head text-center reveal">
+          <span class="eyebrow">Perguntas frequentes</span>
+          <h2>Ficou com alguma dúvida?</h2>
+        </div>
+        <div class="faq__list reveal reveal-d1">
+          <details class="faq-item"><summary>Onde fica o Studio C em Barra Mansa?</summary><p>O Studio C está localizado na Av. Joaquim Leite, 509, no Centro de Barra Mansa - RJ, dentro do Shop House, 1º andar, sala 27.</p></details>
+          <details class="faq-item"><summary>Quais serviços de unhas o Studio C oferece?</summary><p>O Studio C oferece manicure, pedicure, esmaltação em gel, banho de gel, blindagem e alongamento de unhas com molde F1 ou Softgel.</p></details>
+          <details class="faq-item"><summary>O Studio C faz design de sobrancelhas?</summary><p>Sim. O Studio C oferece design de sobrancelhas e design de sobrancelha com henna.</p></details>
+          <details class="faq-item"><summary>O Studio C oferece Spa dos Pés?</summary><p>Sim. Há opções de Spa dos Pés e Spa + Pé.</p></details>
+          <details class="faq-item"><summary>Quem vai me atender no Studio C?</summary><p>O Studio C conta com a Caroll Nascimento e outras profissionais qualificadas, todas seguindo o mesmo padrão de técnica, higiene e atendimento. Ao confirmar o agendamento pelo WhatsApp, a equipe informa qual profissional vai atender você no horário escolhido.</p></details>
+          <details class="faq-item"><summary>Como posso agendar um horário?</summary><p>O agendamento é feito pelo WhatsApp (24) 99854-0945. Basta enviar uma mensagem escolhendo o serviço desejado e retornamos com os horários disponíveis.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <picture>
+          <source srcset="assets/logo-full-branco-compact.webp" type="image/webp" />
+          <img class="footer__logo" src="assets/logo-full-branco-compact.png" alt="Studio C — estúdio de beleza" width="93" height="100"
+               onerror="this.closest('picture').style.display='none';this.closest('picture').nextElementSibling.hidden=false" />
+        </picture>
+        <span class="brand" hidden><span class="brand__mark" style="color:#fff">Studio<span style="color:var(--rose-soft)"> C</span></span><span class="brand__tag">Beleza</span></span>
+        <p>Estúdio de beleza no Centro de Barra Mansa há mais de 10 anos. Manicure, unhas, sobrancelhas, cílios e spa com cuidado, higiene e carinho.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#top">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul>
+          <li><address>Av. Joaquim Leite, 509 — Shop House, 1º Andar, Sala 27<br>Centro, Barra Mansa - RJ</address></li>
+          <li><a href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20C." target="_blank" rel="noopener">WhatsApp (24) 99854-0945</a></li>
+          <li><a href="https://www.instagram.com/studiocvip" target="_blank" rel="noopener">Instagram @studiocvip</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> Studio C — Todos os direitos reservados.</span>
+      <span>Av. Joaquim Leite, 509 · Centro · Barra Mansa - RJ</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="https://wa.me/5524998540945?text=Ol%C3%A1!%20Conheci%20o%20Studio%20C%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a11 11 0 0 1-5-4.4c-.4-.6-.7-1.4-.7-2 0-.6.3-1 .5-1.2.2-.2.4-.3.6-.3h.4c.2 0 .3 0 .5.4l.7 1.6c0 .2 0 .3-.1.5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.3 1.8 1.8.3.2.5.1.6 0l.6-.6c.2-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3.1.2.1.5 0 .8Z"/></svg>
   </a>
 
-  <p class="handle"><strong id="ig-handle">@studiocvip</strong> · ative o sininho para não perder nada ✨</p>
-</main>
-
-<footer>
-  <span class="divider"><span class="heart">♥</span></span>
-  <span>Studio C · Studio de Beleza</span>
-</footer>
-
-<script>
-  // Aplica o @ configurado no topo do arquivo ao botão e ao texto
-  if (typeof INSTAGRAM_USER === "string" && INSTAGRAM_USER && INSTAGRAM_USER !== "SEU_INSTAGRAM") {
-    document.getElementById("ig-link").href = "https://instagram.com/" + INSTAGRAM_USER;
-    document.getElementById("ig-handle").textContent = "@" + INSTAGRAM_USER;
-  }
-</script>
-
+  <script src="js/main.js" defer></script>
+  <script src="js/agendamento.js?v=2026092402" defer></script>
 </body>
 </html>

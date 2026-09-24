@@ -1,0 +1,13 @@
+{
+  "name": "Studio C — Studio de Beleza em Barra Mansa",
+  "short_name": "Studio C",
+  "description": "Manicure, unhas, sobrancelhas, cílios e spa no Centro de Barra Mansa - RJ.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF6F2",
+  "theme_color": "#5E1730",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
