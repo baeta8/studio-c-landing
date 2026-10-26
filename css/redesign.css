@@ -181,11 +181,14 @@ h1, h2, h3, h4 { color: var(--ink); letter-spacing: -.025em; }
 .insta__thumbs .ph { border: 0; border-radius: 6px; }
 
 .location { background: #fff; }
-.loc__grid { align-items: stretch; }
+.loc__units { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
+.loc__unit { display: grid; gap: 1rem; min-width: 0; }
 .loc__card { border: 0; border-radius: 8px; background: var(--porcelain-2); box-shadow: none; }
+.loc__card h3 { margin: .55rem 0 0; color: var(--ink); font-size: clamp(1.45rem, 2.5vw, 1.9rem); }
 .loc__map { border: 0; border-radius: 8px; box-shadow: none; }
-.loc__map iframe { display: block; min-height: 340px; background: #f3edef; }
+.loc__map iframe { display: block; min-height: 280px; background: #f3edef; }
 .loc__list svg { color: var(--rose); }
+@media (max-width: 820px) { .loc__units { grid-template-columns: 1fr; gap: 2rem; } }
 .cta-band { background: var(--rose); border-radius: 0; }
 .cta-band::before { content: none; }
 .cta-band h2, .cta-band .eyebrow { color: #fff; }

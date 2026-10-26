@@ -24,13 +24,23 @@
 
   var WHATSAPP  = '5524998540945';
   var STUDIO    = 'Studio C';
-  var ENDERECO  = 'Av. Joaquim Leite, 509, 1º Andar, Sala 27, Centro, Barra Mansa - RJ';
+  var UNIDADES = {
+    centro: {
+      nome: 'Unidade Centro',
+      endereco: 'Av. Joaquim Leite, 509, Shop House, 1º Andar, Sala 27, Centro, Barra Mansa - RJ'
+    },
+    vila: {
+      nome: 'Unidade Vila Independência',
+      endereco: 'Rua Manoel Pires, 25, Vila Independência, Barra Mansa - RJ'
+    }
+  };
 
   // --------------------------------------------------------
   var form = document.getElementById('bookingForm');
   if (!form) return;
 
   var elService = document.getElementById('bkService');
+  var elLocation = document.getElementById('bkLocation');
   var elDate    = document.getElementById('bkDate');
   var elDateWrap = document.getElementById('bkDatePickerWrap');
   var elDateToggle = document.getElementById('bkDateToggle');
@@ -56,6 +66,14 @@
   var viewMonth = new Date(today.getFullYear(), today.getMonth(), 1);
 
   elService.addEventListener('change', updateSummary);
+  elLocation.addEventListener('change', function () {
+    selectedTime = '';
+    elSlots.querySelectorAll('.booking__slot').forEach(function (slot) {
+      slot.classList.remove('is-active');
+      slot.setAttribute('aria-pressed', 'false');
+    });
+    updateSummary();
+  });
   elDate.addEventListener('change', onDateChange);
   elDateToggle.addEventListener('click', toggleCalendar);
   elPrevMonth.addEventListener('click', function () { shiftMonth(-1); });
@@ -231,10 +249,11 @@
 
   function updateSummary() {
     var service = elService.value;
+    var locationKey = elLocation.value;
     var dateVal = elDate.value ? parseISO(elDate.value) : null;
     var dow = dateVal ? dateVal.getDay() : null;
     var dayOpen = dow !== null && HORARIO_FUNCIONAMENTO[dow];
-    var ready = !!(service && dateVal && dayOpen && selectedTime);
+    var ready = !!(service && locationKey && UNIDADES[locationKey] && dateVal && dayOpen && selectedTime);
 
     if (ready) {
       elSummary.hidden = false;
@@ -243,8 +262,9 @@
         row('Serviço', service) +
         row('Dia', capitalize(DIAS[dow]) + ', ' + formatBR(dateVal)) +
         row('Horário', selectedTime) +
-        row('Local', STUDIO + ' — ' + ENDERECO);
-      elSend.href = buildWaLink(service, dateVal, dow, selectedTime);
+        row('Unidade', UNIDADES[locationKey].nome) +
+        row('Endereço', UNIDADES[locationKey].endereco);
+      elSend.href = buildWaLink(service, dateVal, dow, selectedTime, locationKey);
       elSend.classList.remove('is-disabled');
       elSend.setAttribute('aria-disabled', 'false');
     } else {
@@ -256,13 +276,15 @@
     }
   }
 
-  function buildWaLink(service, date, dow, time) {
+  function buildWaLink(service, date, dow, time, locationKey) {
+    var location = UNIDADES[locationKey];
     var msg =
       'Olá! Gostaria de agendar um horário no ' + STUDIO + '.\n\n' +
       '• Serviço: ' + service + '\n' +
+      '• Unidade: ' + location.nome + '\n' +
       '• Dia: ' + capitalize(DIAS[dow]) + ', ' + formatBR(date) + '\n' +
       '• Horário: ' + time + '\n' +
-      '• Local: ' + STUDIO + ' — ' + ENDERECO + '\n\n' +
+      '• Endereço: ' + location.endereco + '\n\n' +
       'Podem confirmar a disponibilidade? Obrigada!';
     return 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg);
   }
